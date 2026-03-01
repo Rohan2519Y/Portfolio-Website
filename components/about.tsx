@@ -23,7 +23,7 @@ export function About() {
             </div>
             <div className="p-6 bg-card border border-border rounded-lg">
               <h3 className="text-sm font-bold text-foreground uppercase tracking-wide mb-2">Education</h3>
-              <p className="text-2xl font-bold text-primary mb-2">BCA</p>
+              <p className="text-2xl font-bold text-primary mb-2">BCA 1st</p>
               <p className="text-sm text-muted-foreground">Bachelor of Computer Applications, ITM University</p>
             </div>
             <div className="p-6 bg-card border border-border rounded-lg">
