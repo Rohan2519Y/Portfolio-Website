@@ -16,7 +16,7 @@ export function Hero() {
           <div className="space-y-8 animate-in-subtle">
             <div className="inline-block">
               <span className="px-4 py-2 rounded-lg bg-primary/8 dark:bg-primary/12 text-primary text-xs font-bold uppercase tracking-wide">
-                Software Development Professional
+                Junior Software Developer
               </span>
             </div>
             
