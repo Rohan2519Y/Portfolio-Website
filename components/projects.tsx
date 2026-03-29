@@ -3,11 +3,41 @@ import { ExternalLink, Github } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Employee & HR Management System',
+    title: 'HR & Recruitment Management Suite',
     description:
-      'Production-level web application with role-based Admin and Employee panels. Features include attendance tracking, leave management, payroll, and recruitment insights with interactive dashboards.',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Material UI'],
-    highlights: ['Role-based access control', 'Interactive dashboards', 'Attendance tracking', 'Leave management'],
+      'Enterprise-grade platform unifying employee management, attendance tracking, and AI‑powered recruitment. Features role‑based panels (Admin/Employee), check‑in/out with working hours calculation, leave management with history, payslip generation, job assignment tracking, and a complete resume management system with AI‑based parsing, advanced search filters, interactive dashboards, and candidate status tracking.',
+    tech: [
+      'React.js', 'Node.js', 'Express.js', 'MongoDB', 'MySQL',
+      'ChatGPT APIs', 'Material UI', 'Recharts'
+    ],
+    highlights: [
+      'Role‑based access control (Admin/Employee)',
+      'Attendance: check‑in/out, late tracking, working hours, Excel export',
+      'Leave management: apply, history, balance tracking',
+      'Payroll: payslip records and summaries',
+      'Job assignments: track assigned roles and responsibilities',
+      'AI‑powered resume extraction & auto‑fill',
+      'Resume search: keyword, experience, location filters',
+      'Analytics dashboards: status overview (selected/pending/not selected) with pie charts',
+      'Export Excel & candidate remark tracking'
+    ],
+  },
+  {
+    title: 'Job Spiders – Job Platform',
+    description:
+      'Full‑featured job portal connecting candidates and employers. Includes job search with filters, detailed job pages, candidate dashboard with profile and resume management, application tracking, and employer tools for posting jobs and managing applicants.',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'JWT Authentication'],
+    highlights: [
+      '50 lakh+ job listings across industries',
+      'Advanced search with filters (keyword, location, category)',
+      'Candidate dashboard: profile, resume upload, job alerts',
+      'Application tracking with status (approved, pending, rejected)',
+      'Employer side: post jobs, access verified talent pool',
+      'Hiring guarantee (qualified candidates within 72 hours)',
+      'Responsive UI with user ratings & testimonials'
+    ],
+    github: 'https://github.com/Rohan2519Y/Portfolio-Website',
+    live: 'https://jobspiders.com',
   },
   {
     title: 'Attendance Web/Mobile App',
@@ -15,13 +45,6 @@ const projects = [
       'Employee attendance tracking application with check-in/check-out functionality, working hours calculation, late tracking, and monthly summaries. Available as both web and mobile app.',
     tech: ['React.js', 'React Native', 'Node.js', 'MySQL', 'Bootstrap'],
     highlights: ['Check-in/Check-out system', 'Hours calculation', 'Late tracking', 'Monthly reports'],
-  },
-  {
-    title: 'Resume Management & AI Autofill',
-    description:
-      'Advanced resume management system with powerful search functionality and AI-based autofill. Automatically extracts candidate details from uploaded resumes with Excel export capabilities.',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'ChatGPT APIs', 'Material UI'],
-    highlights: ['AI-powered extraction', 'Advanced search filters', 'Status tracking', 'Excel export'],
   },
   {
     title: 'SalesBuddy',
@@ -73,7 +96,7 @@ export function Projects() {
                   <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
                     {project.highlights.map((highlight) => (
                       <li key={highlight} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
                         {highlight}
                       </li>
                     ))}
@@ -88,8 +111,8 @@ export function Projects() {
                   ))}
                 </div>
 
-                {project.github && (
-                  <div className="pt-3">
+                <div className="pt-3 flex flex-wrap gap-4">
+                  {project.github && (
                     <Link
                       href={project.github}
                       target="_blank"
@@ -99,8 +122,19 @@ export function Projects() {
                       <Github className="w-4 h-4" />
                       View Repository
                     </Link>
-                  </div>
-                )}
+                  )}
+                  {project.live && (
+                    <Link
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors duration-300 text-sm"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Website
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           ))}
